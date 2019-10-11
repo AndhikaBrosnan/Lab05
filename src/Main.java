@@ -16,13 +16,13 @@ public class Main {
         System.out.println("LOWER ascii " + lowCase[0] + " :" + (int) lowCase[0]);
         System.out.println("LOWER ascii " + lowCase[25] + " :" + (int) lowCase[25]);
 
-        String id_barang = "aweTYsSaA89op";
+        String id_barang = "1aweTYsSaA89op";
         String id_baru = "";
 
-        System.out.println("IDNYA 1: " + id_barang);
+        System.out.println("IDNYA AWAL: " + id_barang);
         int temp = 0;
 //        id_baru = id_barang.substring(0,j)+upCase[j]+id_barang.substring(j+1);
-        System.out.println("Penggunaan Looping: ");
+        System.out.println("\nHasil Looping: ");
 
         // TODO: 10/11/2019 KALO PEMAKAIAN FOR SIH CITIL YAK :X
         for (int i = 0; i < id_barang.length(); i++) {
@@ -36,9 +36,9 @@ public class Main {
                 id_baru += id_barang.charAt(i);
             }
         }
-        System.out.println("ID BARU: " + id_baru);
+        System.out.println("ID BARU forloop: " + id_baru);
         System.out.println("\n"+"Hasil Recrusive:");
-        System.out.println(recursiveUpper(id_barang,""));
+        recursiveUpper(id_barang,"");
     }
 
     private static String recursiveUpper(String obj,String objbaru) {
@@ -63,16 +63,16 @@ public class Main {
                 }
 
                 id_fix = id_baru;
-
-                System.out.println("1. id lama(if): "+ id_lama);
-                System.out.println("1. id baru(if): " + id_baru);
+//
+//                System.out.println("1. id lama(if): "+ id_lama);
+                System.out.println("1. ID RECURSIVE BARU(if): " + id_baru);
                 return id_baru;
             }else {
                 id_baru = id_lama.charAt(0)+id_baru;
                 id_fix = id_baru;
 
-                System.out.println("2. id lama(else): "+ id_lama);
-                System.out.println("2. id baru(else): " + id_baru);
+//                System.out.println("2. id lama(else): "+ id_lama);
+                System.out.println("2. ID RECURSIVE BARU(else): " + id_baru);
                 return id_baru;
             }
         }
@@ -87,8 +87,8 @@ public class Main {
 
                 recursiveUpper(id_lama.substring(0,id_lama.length() - 1),id_baru);
 
-                System.out.println("3. id lama(if): "+ id_lama);
-                System.out.println("3. id baru(if): " + id_baru);
+//                System.out.println("3. id lama(if): "+ id_lama);
+//                System.out.println("3. id baru(if): " + id_baru);
                 return id_baru;
 
             }else {
@@ -97,8 +97,8 @@ public class Main {
 
                 recursiveUpper(id_lama.substring(0,id_lama.length() - 1), id_baru);
 
-                System.out.println("4. id lama(else): "+ id_lama);
-                System.out.println("4. id baru(else): " + id_baru);
+//                System.out.println("4. id lama(else): "+ id_lama);
+//                System.out.println("4. id baru(else): " + id_baru);
                 return id_baru;
             }
         }
