@@ -56,14 +56,20 @@ public class Main {
         }else if (id_lama.length() == 1){
             if ((int) id_lama.charAt(id_lama.length()-1) < 123 && (int) id_lama.charAt(id_lama.length()-1) > 96) {
                 for (int j = 0; j < lowCase.length; j++) {
-                    if (id_lama.charAt(id_lama.length()-1) == lowCase[j]) {
+                    if (id_lama.charAt(0) == lowCase[j]) {
                         id_baru += upCase[j];
                     }
                 }
+
+                System.out.println("id lama(if): "+ id_lama);
+                System.out.println("id baru(if): " + id_baru);
                 return id_baru;
             }else {
-                id_baru += id_lama.charAt(id_lama.length()-1);
+                id_baru += id_lama.charAt(0);
 
+
+                System.out.println("id lama(else): "+ id_lama);
+                System.out.println("id baru(else): " + id_baru);
                 return id_baru;
             }
         }
